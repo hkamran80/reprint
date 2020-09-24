@@ -7,6 +7,11 @@ module.exports = {
         });
     },
     pwa: {
-        name: "Reprint"
+        name: "Reprint",
+        workboxPluginMode: "InjectManifest",
+        workboxOptions: {
+            swSrc: "src/service-worker.js",
+            exclude: [/\.map$/, /_redirects/],
+        }
     }
 };
