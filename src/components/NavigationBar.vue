@@ -103,7 +103,6 @@ export default {
 
 #navigation a {
     font-weight: bold;
-    color: #ffffff;
     text-decoration: none;
 }
 

@@ -5,11 +5,12 @@ import router from "./router";
 import vuetify from "./plugins/vuetify";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
-import VueShowdown from "vue-showdown";
+import VueSimpleMarkdown from "vue-simple-markdown";
+import "vue-simple-markdown/dist/vue-simple-markdown.css";
 
 Vue.config.productionTip = false;
 
-Vue.use(VueShowdown, { flavor: "github", options: { emoji: false } });
+Vue.use(VueSimpleMarkdown);
 
 new Vue({
     router,

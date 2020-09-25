@@ -29,6 +29,7 @@ export default {
     padding: 15px 45px;
 }
 
+/* Global Styles */
 .text-align--center {
     text-align: center;
 }

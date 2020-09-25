@@ -1,7 +1,7 @@
 <template>
     <div id="feed">
         <v-card
-            max-width="725"
+            max-width="750"
             class="mx-auto bp2"
             v-for="(post, key) in $options.posts"
             :key="key"
