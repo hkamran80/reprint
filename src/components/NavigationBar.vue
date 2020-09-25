@@ -25,14 +25,14 @@
                 >
                     About the Author
                 </router-link>
-                <v-btn
+                <!--<v-btn
                     icon
                     title="Change Theme"
                     aria-label="Change Theme"
                     @click="toggle_theme"
                 >
                     <v-icon>mdi-theme-light-dark</v-icon>
-                </v-btn>
+                </v-btn>-->
             </v-col>
         </v-row>
     </div>
@@ -41,7 +41,7 @@
 <script>
 export default {
     name: "NavigationBar",
-    methods: {
+    /*methods: {
         toggle_theme: function() {
             this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
             localStorage.setItem(
@@ -92,7 +92,7 @@ export default {
                 a.style.setProperty("--inactive-link-color", "#2c3e50");
             }
         }
-    }
+    }*/
 };
 </script>
 
