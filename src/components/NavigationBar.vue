@@ -40,8 +40,9 @@
 
 <script>
 export default {
-    name: "NavigationBar",
-    /*methods: {
+    name: "NavigationBar"
+    /*,
+    methods: {
         toggle_theme: function() {
             this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
             localStorage.setItem(

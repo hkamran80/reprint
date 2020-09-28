@@ -1,8 +1,8 @@
 <template>
     <div class="about">
         <v-row align="center" justify="center">
-            <v-col cols="3"></v-col>
-            <v-col cols="6">
+            <v-col lg="3" md="1" sm="1"></v-col>
+            <v-col lg="6" md="10" sm="10">
                 <header class="pb-7">
                     <h2>
                         About the Author
@@ -33,7 +33,7 @@
                     </section>
                 </article>
             </v-col>
-            <v-col cols="3"></v-col>
+            <v-col lg="3" md="1" sm="1"></v-col>
         </v-row>
     </div>
 </template>

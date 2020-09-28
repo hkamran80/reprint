@@ -1,6 +1,6 @@
 {
     "macOS": [
-        "extracting-applications-and-other-files-from-pkg-files-on-macos",
+        "extracting-pkgs-on-macos",
         "getting-balenaetcher-to-work-on-macos-catalina"
     ],
     "Vue.js": [
@@ -10,9 +10,9 @@
         "using-local-storage-to-store-vuetifys-dark-theme-state"
     ],
     "Git": [
-        "pushing-to-github-with-git"
+        "inaccurate-pushing-to-github-with-git"
     ],
     "GitHub": [
-        "pushing-to-github-with-git"
+        "inaccurate-pushing-to-github-with-git"
     ]
 }
