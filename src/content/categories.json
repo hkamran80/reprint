@@ -1,0 +1,39 @@
+{
+    "macos": {
+        "name": "macOS",
+        "posts": [
+            "extracting-pkgs-on-macos",
+            "getting-balenaetcher-to-work-on-macos-catalina"
+        ]
+    },
+    "vuejs": {
+        "name": "Vue.js",
+        "posts": [
+            "using-local-storage-to-store-vuetifys-dark-theme-state"
+        ]
+    },
+    "darkmode": {
+        "name": "Dark Mode",
+        "posts": [
+            "using-local-storage-to-store-vuetifys-dark-theme-state"
+        ]
+    },
+    "git": {
+        "name": "Git",
+        "posts": [
+            "inaccurate-pushing-to-github-with-git"
+        ]
+    },
+    "github": {
+        "name": "GitHub",
+        "posts": [
+            "inaccurate-pushing-to-github-with-git"
+        ]
+    },
+    "demo": {
+        "name": "Demo Category",
+        "posts": [
+            "using-local-storage-to-store-vuetifys-dark-theme-state"
+        ]
+    }
+}

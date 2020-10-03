@@ -1,3 +1,5 @@
+/* global __precacheManifest, workbox */
+
 // eslint-disable-next-line no-unused-vars
 self.addEventListener("fetch", function(event) {});
 

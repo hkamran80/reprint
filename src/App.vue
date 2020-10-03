@@ -3,7 +3,6 @@
         <v-main>
             <v-container fluid>
                 <NavigationBar />
-
                 <router-view />
             </v-container>
         </v-main>

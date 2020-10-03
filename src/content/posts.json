@@ -4,21 +4,21 @@
         "title": "Pushing to GitHub with Git [Inaccurate]",
         "publish_date": "June 20, 2020",
         "excerpt": "Want to know how to push to GitHub? Read on. (This article is inaccurate. I highly recommend you do NOT read this article.)",
-        "categories": ["Git", "GitHub"]
+        "categories": [["git", "Git"], ["github", "GitHub"]]
     },
     "using-local-storage-to-store-vuetifys-dark-theme-state": {
         "featured": "https://images.ctfassets.net/53bz5nlaavpb/dTsYYJyvXtmq9XRgkiY6z/73b7326f9a52840445f5bede6fadc2cf/unnamed.png",
         "title": "Using Local Storage to Store Vuetify's Dark Theme State",
         "publish_date": "June 4, 2020",
         "excerpt": "Ever wondered how to change Vuetify’s theme at the touch of a button and save the setting via local storage? You've come to the right place.",
-        "categories": ["Vue.js", "Dark Mode"]
+        "categories": [["vuejs", "Vue.js"], ["darkmode", "Dark Mode"]]
     },
     "getting-balenaetcher-to-work-on-macos-catalina": {
         "featured": "https://cdn-images-1.medium.com/max/3648/1*BBIgFjFdgiWAvFkTXWsHAA.png",
         "title": "Getting balenaEtcher to Work on macOS Catalina",
         "publish_date": "January 30, 2020",
         "excerpt": "balenaEtcher was throwing an error when trying to flash an image to a microSD card, here's how I fixed it",
-        "categories": ["macOS"]
+        "categories": [["macos", "macOS"]]
     },
     "extracting-pkgs-on-macos": {
         "featured":
@@ -26,6 +26,6 @@
         "title": "Expanding PKGs on macOS",
         "publish_date": "January 30, 2020",
         "excerpt": "Ever needed to expand a PKG without using Installer? Here's a guide.",
-        "categories": ["macOS"]
+        "categories": [["macos", "macOS"]]
     }
 }

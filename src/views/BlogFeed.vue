@@ -27,11 +27,12 @@
                         <div class="categories">
                             <v-chip
                                 v-for="category in post.categories"
-                                :key="category"
+                                :key="category[0]"
                                 class="mr-2"
-                                :href="'/'"
-                                v-text="category"
-                            ></v-chip>
+                                :href="'/category/' + category[0]"
+                                v-text="category[1]"
+                            >
+                            </v-chip>
                         </div>
                     </v-card-text>
                 </v-col>
@@ -41,11 +42,13 @@
 </template>
 
 <script>
-import posts_json from "@/posts/posts.json";
+import posts_json from "@/content/posts.json";
+import categories_json from "@/content/categories.json";
 
 export default {
     name: "BlogFeed",
-    posts: posts_json
+    posts: posts_json,
+    category_list: categories_json
 };
 </script>
 

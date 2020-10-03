@@ -1,39 +1,63 @@
 <template>
-    <div class="about">
+    <div id="about">
         <v-row align="center" justify="center">
-            <v-col lg="3" md="1" sm="1"></v-col>
-            <v-col lg="6" md="10" sm="10">
+            <v-col lg="3"></v-col>
+            <v-col lg="6" md="12" sm="12" xs="12">
                 <header class="pb-7">
-                    <h2>
-                        About the Author
-                    </h2>
+                    <div id="metadata">
+                        <h1 class="pb-1">About the Author</h1>
+                    </div>
                 </header>
                 <article>
-                    <section class="pb-3">
-                        H. Kamran is a developer experienced in Python,
-                        JavaScript, JavaScript, Vue.js, Swift, and Git. He
-                        writes about content that he finds interesting or useful
-                        to share with the world.
-                    </section>
-                    <section class="pb-3">
-                        You can view his site at
-                        <a href="https://hkamran.com" target="_blank"
-                            >hkamran.com</a
-                        >. You can follow him on
-                        <a href="https://twitter.com/@hkamran80" target="_blank"
-                            >Twitter</a
-                        >,
-                        <a href="https://github.com/hkamran80" target="_blank"
-                            >GitHub</a
-                        >, and
-                        <a href="https://medium.com/@hkamran80" target="_blank"
-                            >Medium</a
-                        >. A full list of his projects and social media are
-                        available on his website.
-                    </section>
+                    <vue-simple-markdown
+                        v-if="md != '' && !error"
+                        :source="md"
+                        inline-code
+                        image="true"
+                    />
+
+                    <v-progress-circular
+                        v-if="md == '' && !error"
+                        indeterminate
+                        color="primary"
+                    ></v-progress-circular>
+
+                    <v-alert type="error" v-if="error">
+                        An error occurred. Check below for the error. If the
+                        problem persists after five minutes, contact H. Kamran.
+                    </v-alert>
+                    <v-alert type="error" v-if="error" v-text="error"></v-alert>
                 </article>
             </v-col>
-            <v-col lg="3" md="1" sm="1"></v-col>
+            <v-col lg="3"></v-col>
         </v-row>
     </div>
 </template>
+
+<script>
+export default {
+    name: "AboutTheAuthor",
+    data: function() {
+        return {
+            md: "",
+            error: false
+        };
+    },
+    mounted() {
+        import("raw-loader!@/content/about-the-author.md")
+            .then(data => {
+                this.md = data.default;
+            })
+            .catch(error => {
+                console.error(error);
+                this.error = error;
+            });
+    }
+};
+</script>
+
+<style scoped>
+div#about {
+    text-align: left;
+}
+</style>
