@@ -42,6 +42,13 @@ const routes = [
             name: "Error404",
             query: { path: window.location.origin + from.path }
         })
+    },
+    {
+        path: "/*",
+        redirect: from => ({
+            name: "Error404",
+            query: { path: window.location.origin + from.path }
+        })
     }
 ];
 
