@@ -30,10 +30,10 @@
             "inaccurate-pushing-to-github-with-git"
         ]
     },
-    "demo": {
-        "name": "Demo Category",
+    "inaccurate": {
+        "name": "Inaccurate",
         "posts": [
-            "using-local-storage-to-store-vuetifys-dark-theme-state"
+            "inaccurate-pushing-to-github-with-git"
         ]
     }
 }

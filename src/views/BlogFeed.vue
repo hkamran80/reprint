@@ -1,5 +1,6 @@
 <template>
     <div id="feed">
+        <!--
         <v-card
             max-width="750"
             class="mx-auto bp2"
@@ -38,17 +39,56 @@
                 </v-col>
             </v-row>
         </v-card>
+        -->
+        <v-row align="center" justify="center">
+            <v-spacer />
+            <v-col cols="5">
+                <blog-card
+                    v-for="(post, key) in $options.posts"
+                    :key="key"
+                    :id="key"
+                    :featured-image-src="post.featured"
+                    :title="post.title"
+                    :publishDate="post.publish_date"
+                    :excerpt="post.excerpt"
+                    :categories="categories[key]"
+                />
+            </v-col>
+            <v-spacer />
+        </v-row>
     </div>
 </template>
 
 <script>
 import posts_json from "@/content/posts.json";
 import categories_json from "@/content/categories.json";
+import BlogCard from "../components/BlogCard.vue";
 
 export default {
     name: "BlogFeed",
     posts: posts_json,
-    category_list: categories_json
+    category_list: categories_json,
+    components: { BlogCard },
+    data: function() {
+        return {
+            categories: null
+        };
+    },
+    mounted() {
+        var categories = {};
+        for (let post of Object.entries(this.$options.posts)) {
+            let category_array = [];
+            for (let category of post[1].categories) {
+                category_array.push({
+                    id: category[0],
+                    name: category[1]
+                });
+            }
+            let id = post[0];
+            categories[id] = category_array;
+        }
+        this.categories = categories;
+    }
 };
 </script>
 
@@ -63,11 +103,5 @@ export default {
 a.bp2 {
     padding: 10px;
     margin: 12px;
-}
-div.v-image {
-    margin: 8px;
-}
-div.categories {
-    margin-top: 10px;
 }
 </style>

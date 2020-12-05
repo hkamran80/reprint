@@ -1,3 +1,3 @@
-H. Kamran is a developer experienced in Python, JavaScript, JavaScript, Vue.js, Swift, and Git. He writes about content that he finds interesting or useful to share with the world.
+H. Kamran is a developer experienced in Python, JavaScript, Vue.js, Swift, and Git. He writes about content that he finds interesting or useful to share with the world.
 
 You can view his site at [hkamran.com](https://hkamran.com). Follow him on [Twitter](https://twitter.com/hkamran80) and [GitHub](https://github.com/hkamran80). A full list of his projects and social media is available on his website.

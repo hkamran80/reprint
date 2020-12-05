@@ -1,8 +1,8 @@
 <template>
     <div id="about">
         <v-row align="center" justify="center">
-            <v-col lg="3"></v-col>
-            <v-col lg="6" md="12" sm="12" xs="12">
+            <v-spacer />
+            <v-col lg="5" md="12" sm="12" xs="12">
                 <header class="pb-7">
                     <div id="metadata">
                         <h1 class="pb-1">About the Author</h1>
@@ -29,7 +29,7 @@
                     <v-alert type="error" v-if="error" v-text="error"></v-alert>
                 </article>
             </v-col>
-            <v-col lg="3"></v-col>
+            <v-spacer />
         </v-row>
     </div>
 </template>

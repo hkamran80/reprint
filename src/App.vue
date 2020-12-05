@@ -6,6 +6,23 @@
                 <router-view />
             </v-container>
         </v-main>
+        <v-footer padless>
+            <v-card flat tile width="100%">
+                <v-card-text>
+                    A mirror of these posts is available on
+                    <a href="https://hkamran.medium.com" target="_blank"
+                        >Medium</a
+                    >.
+                </v-card-text>
+                <v-divider></v-divider>
+                <v-card-text>
+                    Copyright © H. Kamran, {{ new Date().getFullYear() }}. The
+                    materials on this on this website may be freely copied and
+                    distributed so long as the copyright notice and website
+                    included.
+                </v-card-text>
+            </v-card>
+        </v-footer>
     </v-app>
 </template>
 

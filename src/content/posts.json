@@ -4,7 +4,7 @@
         "title": "Pushing to GitHub with Git [Inaccurate]",
         "publish_date": "June 20, 2020",
         "excerpt": "Want to know how to push to GitHub? Read on. (This article is inaccurate. I highly recommend you do NOT read this article.)",
-        "categories": [["git", "Git"], ["github", "GitHub"]]
+        "categories": [["inaccurate", "Inaccurate"], ["git", "Git"], ["github", "GitHub"]]
     },
     "using-local-storage-to-store-vuetifys-dark-theme-state": {
         "featured": "https://images.ctfassets.net/53bz5nlaavpb/dTsYYJyvXtmq9XRgkiY6z/73b7326f9a52840445f5bede6fadc2cf/unnamed.png",
