@@ -18,7 +18,7 @@
                 <v-card-text>
                     Copyright © H. Kamran, {{ new Date().getFullYear() }}. The
                     materials on this on this website may be freely copied and
-                    distributed so long as the copyright notice and website
+                    distributed so long as the copyright notice and website are
                     included.
                 </v-card-text>
             </v-card>
