@@ -19,7 +19,7 @@ When you have a folder without the .git folder, we need to initalize the reposit
 1. Start by typing `git init`. This will create a `.git` folder that contains basic information.
 2. Add `.gitignore` file. A `.gitignore` tells Git not to add the files and directories that are listed in the file. (Examples include the `node_modules/` directory, a `.env`, etc. GitHub has a good list of premade `.gitignore` files [in this repository](https://github.com/github/gitignore).)
 3. Type `git add .`. This will add all the files and directories, save for the ones from the `.gitignore` file, to the repository's commit.
-4. Add a commit message with `git commit -m "<COMMIT_MESSAGE_HERE>"`. Replace the <COMMIT_MESSAGE_HERE> with your commit message. The maximum length is fifty characters.
+4. Add a commit message with `git commit -m "<COMMIT_MESSAGE_HERE>"`. Replace the `<COMMIT_MESSAGE_HERE>` with your commit message. The maximum length is fifty characters.
 5. Add the GitHub repository, as an upstream repository, to the local Git repository, with the command `git remote add origin <REPOSITORY_PATH>.git`. Be sure to replace `<REPOSITORY_PATH>` with your repository's path. For example, if I were adding my [Schedules](https://github.com/hkamran80/schedules) repository, the command would be `git remote add origin https://github.com/hkamran80/schedules.git`. If previously unsigned in, the utility will ask you to sign in to GitHub.
 6. Push the changes with `git push -u origin master`. This pushes the changes to the origin's master branch.
 

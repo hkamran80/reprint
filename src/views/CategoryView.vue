@@ -34,6 +34,9 @@
                                 :publishDate="
                                     $options.posts[post_id].publish_date
                                 "
+                                :updateDate="
+                                    $options.posts[post_id].update_date
+                                "
                                 :excerpt="$options.posts[post_id].excerpt"
                                 :categories="categories[post_id]"
                             />
@@ -58,8 +61,7 @@ export default {
     components: { BlogCard },
     data: function() {
         return {
-            error: false,
-            categories: null
+            error: false
         };
     },
     created() {
@@ -72,21 +74,6 @@ export default {
                 query: { path: window.location.origin + this.$route.path }
             });
         }
-    },
-    mounted() {
-        var categories = {};
-        for (let post of Object.entries(this.$options.posts)) {
-            let category_array = [];
-            for (let category of post[1].categories) {
-                category_array.push({
-                    id: category[0],
-                    name: category[1]
-                });
-            }
-            let id = post[0];
-            categories[id] = category_array;
-        }
-        this.categories = categories;
     }
 };
 </script>

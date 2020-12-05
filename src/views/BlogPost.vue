@@ -22,24 +22,18 @@
                         </div>
                         <div class="categories pb-4">
                             <v-chip
-                                v-for="category in post.categories"
-                                :key="category[0]"
+                                v-for="category of post.categories"
+                                :key="category"
                                 class="mr-2"
-                                :href="'/category/' + category[0]"
-                                v-text="category[1]"
+                                :href="`/category/${category}`"
+                                v-text="$options.categories[category].name"
                                 label
-                            >
-                            </v-chip>
+                            />
                         </div>
                         <img :src="post.featured" width="100%" />
                     </header>
                     <article>
-                        <vue-simple-markdown
-                            v-if="md != '' && !error"
-                            :source="md"
-                            inline-code
-                            image="true"
-                        />
+                        <vue-markdown v-if="md != '' && !error" :source="md" />
 
                         <v-progress-circular
                             v-if="md == '' && !error"
@@ -56,9 +50,13 @@
 
 <script>
 import posts_json from "@/content/posts.json";
+import categories_json from "@/content/categories.json";
+import VueMarkdown from "vue-markdown";
 
 export default {
     name: "BlogPost",
+    categories: categories_json,
+    components: { VueMarkdown },
     data: function() {
         return {
             md: "",

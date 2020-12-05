@@ -4,7 +4,7 @@ Let’s say you’re on a computer where you don’t have administrative access,
 
 To get started, you first need two things. A macOS-equipped computer and a DMG with a PKG inside, or just a PKG. This tutorial will detail both.
 
-### Extracting the Package Contents
+## Extracting the Package Contents
 **If your PKG is inside of a DMG, start here.**
 
 To extract the payload from a PKG inside of a DMG, we need to mount the DMG. There are two ways to do this. You can either use the Finder (double-click the DMG to mount it) or use the terminal with the following command:
@@ -13,6 +13,7 @@ To extract the payload from a PKG inside of a DMG, we need to mount the DMG. The
 hdiutil attach <PATH_TO_YOUR_DMG>
 (EXAMPLE) hdiutil attach ~/Downloads/SF-Symbols.dmg
 ```
+
 **PKG Extraction**
 
 Now is where we have to use the terminal. In your terminal, navigate to the folder just above where you want your PKG to be extracted. An example command is as follows:
