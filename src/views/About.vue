@@ -9,12 +9,7 @@
                     </div>
                 </header>
                 <article>
-                    <vue-simple-markdown
-                        v-if="md != '' && !error"
-                        :source="md"
-                        inline-code
-                        image="true"
-                    />
+                    <vue-markdown v-if="md != '' && !error" :source="md" />
 
                     <v-progress-circular
                         v-if="md == '' && !error"
@@ -35,8 +30,10 @@
 </template>
 
 <script>
+import VueMarkdown from "vue-markdown";
 export default {
     name: "AboutTheAuthor",
+    components: { VueMarkdown },
     data: function() {
         return {
             md: "",
