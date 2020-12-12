@@ -11,6 +11,7 @@
                     :title="post.title"
                     :publishDate="post.publish_date"
                     :updateDate="post.update_date"
+                    :readingTime="post.reading_time"
                     :excerpt="post.excerpt"
                     :categories="post.categories"
                 />

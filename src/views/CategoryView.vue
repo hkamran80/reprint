@@ -43,8 +43,11 @@
                                 :updateDate="
                                     $options.posts[post_id].update_date
                                 "
+                                :readingTime="
+                                    $options.posts[post_id].reading_time
+                                "
                                 :excerpt="$options.posts[post_id].excerpt"
-                                :categories="$options.categories[post_id]"
+                                :categories="$options.posts[post_id].categories"
                             />
                         </div>
                     </div>

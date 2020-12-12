@@ -2,7 +2,12 @@
     <div>
         <v-card :href="`/posts/${id}`">
             <v-img class="align-end" width="100%" :src="featuredImageSrc" />
-            <v-card-title class="text-wrap--break" v-text="title" />
+            <v-card-title class="text-wrap--break">
+                <v-row dense no-gutters>
+                    <v-col v-text="title" />
+                    <v-col class="text-right subtitle-1" v-text="readingTime" />
+                </v-row>
+            </v-card-title>
             <v-card-subtitle>
                 {{ publishDate }}
                 <span
@@ -46,6 +51,7 @@ export default {
         title: String,
         publishDate: String,
         updateDate: String,
+        readingTime: String,
         excerpt: String,
         categories: Array
     }
