@@ -10,7 +10,7 @@
                         </div>
                     </div>
                     <div v-else>
-                        <h1 class="pb-7">
+                        <h1>
                             Category:
 
                             {{
@@ -18,10 +18,16 @@
                                     .name
                             }}
                         </h1>
+                        <h2
+                            class="pb-7"
+                            v-text="
+                                `${found_posts.length} Post${
+                                    found_posts.length !== 1 ? 's' : ''
+                                }`
+                            "
+                        />
                         <div
-                            v-for="post_id in $options.categories[
-                                this.$route.params.category
-                            ].posts"
+                            v-for="post_id in found_posts"
                             :key="post_id"
                             :id="post_id"
                         >
@@ -38,7 +44,7 @@
                                     $options.posts[post_id].update_date
                                 "
                                 :excerpt="$options.posts[post_id].excerpt"
-                                :categories="categories[post_id]"
+                                :categories="$options.categories[post_id]"
                             />
                         </div>
                     </div>
@@ -61,6 +67,7 @@ export default {
     components: { BlogCard },
     data: function() {
         return {
+            found_posts: null,
             error: false
         };
     },
@@ -70,10 +77,15 @@ export default {
         ) {
             this.error = `The category you are trying to access, ${this.$route.params.category}, does not exist.`;
             this.$router.push({
-                name: "Error404",
+                name: "NotFound",
                 query: { path: window.location.origin + this.$route.path }
             });
         }
+    },
+    mounted() {
+        this.found_posts = this.$options.categories[
+            this.$route.params.category
+        ].posts;
     }
 };
 </script>

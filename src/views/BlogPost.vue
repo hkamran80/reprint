@@ -79,7 +79,7 @@ export default {
         } else {
             this.error = `The post you are trying to access, ${this.$route.params.post}, does not exist.`;
             this.$router.push({
-                name: "Error404",
+                name: "NotFound",
                 query: { path: window.location.origin + this.$route.path }
             });
         }

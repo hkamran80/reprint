@@ -32,14 +32,14 @@ const routes = [
     },
     {
         path: "/error/404",
-        name: "Error404",
+        name: "NotFound",
         component: () =>
-            import(/* webpackChuckName: "error404" */ "../views/404.vue")
+            import(/* webpackChuckName: "notfound" */ "../views/NotFound.vue")
     },
     {
         path: "*",
         redirect: from => ({
-            name: "Error404",
+            name: "NotFound",
             query: { path: window.location.origin + from.path }
         })
     },
