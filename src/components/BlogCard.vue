@@ -5,7 +5,11 @@
             <v-card-title class="text-wrap--break">
                 <v-row dense no-gutters>
                     <v-col v-text="title" />
-                    <v-col class="text-right subtitle-1" v-text="readingTime" />
+                    <v-col
+                        cols="1"
+                        class="text-right subtitle-1"
+                        v-text="readingTime"
+                    />
                 </v-row>
             </v-card-title>
             <v-card-subtitle>
