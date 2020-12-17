@@ -2,16 +2,7 @@
     <div>
         <v-card :href="`/posts/${id}`">
             <v-img class="align-end" width="100%" :src="featuredImageSrc" />
-            <v-card-title class="text-wrap--break">
-                <v-row dense no-gutters>
-                    <v-col v-text="title" />
-                    <v-col
-                        cols="1"
-                        class="text-right subtitle-1"
-                        v-text="readingTime"
-                    />
-                </v-row>
-            </v-card-title>
+            <v-card-title v-text="title" style="word-break: break-all;" />
             <v-card-subtitle>
                 {{ publishDate }}
                 <span
@@ -25,6 +16,8 @@
                     <br />
                     {{ updateDate }} (Updated)
                 </span>
+                <br />
+                {{ readingTime }}
             </v-card-subtitle>
             <v-card-text>
                 <div class="excerpt text-wrap--break" v-text="excerpt" />

@@ -16,7 +16,7 @@
                 class="text-align--right"
                 align-self="center"
                 justify="center"
-                cols="3"
+                cols="4"
             >
                 <router-link
                     to="/about"
@@ -25,14 +25,16 @@
                 >
                     About the Author
                 </router-link>
-                <!--<v-btn
+                <v-btn
                     icon
-                    title="Change Theme"
-                    aria-label="Change Theme"
+                    title="Toggle Theme"
+                    aria-label="Toggle Theme"
                     @click="toggle_theme"
                 >
-                    <v-icon>mdi-theme-light-dark</v-icon>
-                </v-btn>-->
+                    <v-icon color="primary">
+                        mdi-theme-light-dark
+                    </v-icon>
+                </v-btn>
             </v-col>
         </v-row>
     </div>
@@ -40,41 +42,15 @@
 
 <script>
 export default {
-    name: "NavigationBar"
-    /*,
-    methods: {
-        toggle_theme: function() {
-            this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-            localStorage.setItem(
-                "dark_theme",
-                this.$vuetify.theme.dark.toString()
-            );
-            if (this.$vuetify.theme.dark) {
-                for (let a of document.getElementsByTagName("a")) {
-                    a.style.setProperty("--inactive-link-color", "#3179bc");
-                }
-            } else {
-                for (let a of document.getElementsByTagName("a")) {
-                    a.style.setProperty("--inactive-link-color", "#2c3e50");
-                }
-            }
-        }
-    },
+    name: "NavigationBar",
     mounted() {
-        // Dark Theme
         const theme = localStorage.getItem("dark_theme");
         if (theme) {
             // deepcode ignore UseStrictEquality: Loaded as a String, not a Boolean
             if (theme == "true") {
                 this.$vuetify.theme.dark = true;
-                for (let a of document.getElementsByTagName("a")) {
-                    a.style.setProperty("--inactive-link-color", "#3179bc");
-                }
             } else {
                 this.$vuetify.theme.dark = false;
-                for (let a of document.getElementsByTagName("a")) {
-                    a.style.setProperty("--inactive-link-color", "#2c3e50");
-                }
             }
         } else if (
             window.matchMedia &&
@@ -85,15 +61,17 @@ export default {
                 "dark_theme",
                 this.$vuetify.theme.dark.toString()
             );
-            for (let a of document.getElementsByTagName("a")) {
-                a.style.setProperty("--inactive-link-color", "#3179bc");
-            }
-        } else {
-            for (let a of document.getElementsByTagName("a")) {
-                a.style.setProperty("--inactive-link-color", "#2c3e50");
-            }
         }
-    }*/
+    },
+    methods: {
+        toggle_theme: function() {
+            this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+            localStorage.setItem(
+                "dark_theme",
+                this.$vuetify.theme.dark.toString()
+            );
+        }
+    }
 };
 </script>
 

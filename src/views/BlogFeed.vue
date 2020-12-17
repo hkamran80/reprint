@@ -2,7 +2,7 @@
     <div id="feed">
         <v-row align="center" justify="center">
             <v-spacer />
-            <v-col cols="5">
+            <v-col lg="5" md="12" sm="12" xs="12">
                 <blog-card
                     v-for="(post, key) in $options.posts"
                     :key="key"

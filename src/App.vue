@@ -9,19 +9,10 @@
         <v-footer padless>
             <v-card flat tile width="100%">
                 <v-card-text>
-                    <v-row align="center" justify="center" dense no-gutters>
-                        <v-col>
-                            A mirror of these posts is available on
-                            <a href="https://hkamran.medium.com" target="_blank"
-                                >Medium</a
-                            >.
-                        </v-col>
-                        <v-col class="text-align--right">
-                            <v-btn text @click="toggle_theme">
-                                Toggle Dark Theme
-                            </v-btn>
-                        </v-col>
-                    </v-row>
+                    A mirror of these posts is available on
+                    <a href="https://hkamran.medium.com" target="_blank"
+                        >Medium</a
+                    >.
                 </v-card-text>
                 <v-divider></v-divider>
                 <v-card-text>
@@ -41,35 +32,6 @@ export default {
     name: "App",
     components: {
         NavigationBar
-    },
-    mounted() {
-        const theme = localStorage.getItem("dark_theme");
-        if (theme) {
-            // deepcode ignore UseStrictEquality: Loaded as a String, not a Boolean
-            if (theme == "true") {
-                this.$vuetify.theme.dark = true;
-            } else {
-                this.$vuetify.theme.dark = false;
-            }
-        } else if (
-            window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-        ) {
-            this.$vuetify.theme.dark = true;
-            localStorage.setItem(
-                "dark_theme",
-                this.$vuetify.theme.dark.toString()
-            );
-        }
-    },
-    methods: {
-        toggle_theme: function() {
-            this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-            localStorage.setItem(
-                "dark_theme",
-                this.$vuetify.theme.dark.toString()
-            );
-        }
     }
 };
 </script>
