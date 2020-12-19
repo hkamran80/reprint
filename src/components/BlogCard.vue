@@ -2,7 +2,7 @@
     <div>
         <v-card :href="`/posts/${id}`">
             <v-img class="align-end" width="100%" :src="featuredImageSrc" />
-            <v-card-title v-text="title" style="word-break: break-all;" />
+            <v-card-title v-text="title" style="word-break: break-word;" />
             <v-card-subtitle>
                 {{ publishDate }}
                 <span

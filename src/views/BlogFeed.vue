@@ -1,11 +1,13 @@
 <template>
     <div id="feed">
         <v-row align="center" justify="center">
-            <v-spacer />
-            <v-col lg="5" md="12" sm="12" xs="12">
+            <v-col
+                v-for="(post, i) in $options.posts"
+                :key="i"
+                cols="12"
+                md="5"
+            >
                 <blog-card
-                    v-for="(post, key) in $options.posts"
-                    :key="key"
                     :id="key"
                     :featured-image-src="post.featured"
                     :title="post.title"
@@ -16,7 +18,6 @@
                     :categories="post.categories"
                 />
             </v-col>
-            <v-spacer />
         </v-row>
     </div>
 </template>
