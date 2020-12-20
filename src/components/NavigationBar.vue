@@ -1,43 +1,41 @@
 <template>
-    <div id="navigation">
-        <v-row no-gutters>
-            <v-col align-self="center" justify="center">
-                <router-link to="/">
-                    <h1 color="primary">
-                        Reprint
-                    </h1>
-                </router-link>
+    <v-row id="navigation" no-gutters>
+        <v-col align-self="center" justify="center">
+            <router-link to="/">
+                <h1 color="primary">
+                    Reprint
+                </h1>
+            </router-link>
 
-                <span>
-                    The blog of H. Kamran
-                </span>
-            </v-col>
-            <v-col
-                class="text-align--right"
-                align-self="center"
-                justify="center"
-                cols="4"
+            <span>
+                The blog of H. Kamran
+            </span>
+        </v-col>
+        <v-col
+            class="text-align--right"
+            align-self="center"
+            justify="center"
+            cols="4"
+        >
+            <router-link
+                to="/about"
+                title="About the Author"
+                aria-label="About the Author"
             >
-                <router-link
-                    to="/about"
-                    title="About the Author"
-                    aria-label="About the Author"
-                >
-                    About the Author
-                </router-link>
-                <v-btn
-                    icon
-                    title="Toggle Theme"
-                    aria-label="Toggle Theme"
-                    @click="toggle_theme"
-                >
-                    <v-icon color="primary">
-                        mdi-theme-light-dark
-                    </v-icon>
-                </v-btn>
-            </v-col>
-        </v-row>
-    </div>
+                About the Author
+            </router-link>
+            <v-btn
+                icon
+                title="Toggle Theme"
+                aria-label="Toggle Theme"
+                @click="toggle_theme"
+            >
+                <v-icon color="primary">
+                    mdi-theme-light-dark
+                </v-icon>
+            </v-btn>
+        </v-col>
+    </v-row>
 </template>
 
 <script>
@@ -86,7 +84,7 @@ export default {
 }
 
 #navigation a.router-link-exact-active {
-    color: #42b983;
+    color: #e91e63;
 }
 
 #navigation button.v-btn {

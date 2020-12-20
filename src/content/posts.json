@@ -6,7 +6,7 @@
         "update_date": "",
         "reading_time": "3m",
         "excerpt": "Want to know how to push to GitHub? Read on. (This article is inaccurate. I highly recommend you do NOT read this article.)",
-        "categories": ["inaccurate", "git", "github"]
+        "categories": ["inaccurate", "git", "github", "development"]
     },
     "using-local-storage-to-store-vuetifys-dark-theme-state": {
         "featured": "https://images.ctfassets.net/53bz5nlaavpb/dTsYYJyvXtmq9XRgkiY6z/73b7326f9a52840445f5bede6fadc2cf/unnamed.png",
@@ -15,7 +15,7 @@
         "update_date": "",
         "reading_time": "5m30s",
         "excerpt": "Ever wondered how to change Vuetify’s theme at the touch of a button and save the setting via local storage? You've come to the right place.",
-        "categories": ["vuejs", "darkmode"]
+        "categories": ["vuejs", "darkmode", "development"]
     },
     "getting-balenaetcher-to-work-on-macos-catalina": {
         "featured": "https://cdn-images-1.medium.com/max/3648/1*BBIgFjFdgiWAvFkTXWsHAA.png",

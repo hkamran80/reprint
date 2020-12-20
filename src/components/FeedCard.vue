@@ -40,7 +40,7 @@
 <script>
 import categories_json from "@/content/categories.json";
 export default {
-    name: "BlogCard",
+    name: "FeedCard",
     categories: categories_json,
     props: {
         id: String,

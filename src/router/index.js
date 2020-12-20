@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import BlogFeed from "../views/BlogFeed.vue";
+import BlogFeed from "../views/Feed.vue";
 
 Vue.use(VueRouter);
 
@@ -20,7 +20,7 @@ const routes = [
         path: "/posts/:post",
         name: "Post",
         component: () =>
-            import(/* webpackChuckName: "post" */ "../views/BlogPost.vue")
+            import(/* webpackChuckName: "post" */ "../views/PostView.vue")
     },
     {
         path: "/category/:category",
@@ -31,7 +31,7 @@ const routes = [
             )
     },
     {
-        path: "/error/404",
+        path: "/notfound",
         name: "NotFound",
         component: () =>
             import(/* webpackChuckName: "notfound" */ "../views/NotFound.vue")
@@ -40,13 +40,6 @@ const routes = [
         path: "*",
         redirect: from => ({
             name: "NotFound",
-            query: { path: window.location.origin + from.path }
-        })
-    },
-    {
-        path: "/*",
-        redirect: from => ({
-            name: "Error404",
             query: { path: window.location.origin + from.path }
         })
     }

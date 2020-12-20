@@ -35,5 +35,12 @@
         "posts": [
             "inaccurate-pushing-to-github-with-git"
         ]
+    },
+    "development": {
+        "name": "Development",
+        "posts": [
+            "using-local-storage-to-store-vuetifys-dark-theme-state",
+            "inaccurate-pushing-to-github-with-git"
+        ]
     }
 }

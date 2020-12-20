@@ -1,73 +1,51 @@
 <template>
-    <div id="content">
-        <div>
-            <v-row align="center" justify="center">
-                <v-spacer />
-                <v-col lg="5" md="12" sm="12" xs="12">
-                    <div v-if="error">
-                        <div id="error">
-                            <v-alert type="error" v-text="error"></v-alert>
-                        </div>
-                    </div>
-                    <div v-else>
-                        <h1>
-                            Category:
-
-                            {{
-                                $options.categories[this.$route.params.category]
-                                    .name
-                            }}
-                        </h1>
-                        <h2
-                            class="pb-7"
-                            v-text="
-                                `${found_posts.length} Post${
-                                    found_posts.length !== 1 ? 's' : ''
-                                }`
-                            "
-                        />
-                        <div
-                            v-for="post_id in found_posts"
-                            :key="post_id"
-                            :id="post_id"
-                        >
-                            <blog-card
-                                :id="post_id"
-                                :featured-image-src="
-                                    $options.posts[post_id].featured
-                                "
-                                :title="$options.posts[post_id].title"
-                                :publishDate="
-                                    $options.posts[post_id].publish_date
-                                "
-                                :updateDate="
-                                    $options.posts[post_id].update_date
-                                "
-                                :readingTime="
-                                    $options.posts[post_id].reading_time
-                                "
-                                :excerpt="$options.posts[post_id].excerpt"
-                                :categories="$options.posts[post_id].categories"
-                            />
-                        </div>
-                    </div>
-                </v-col>
-                <v-spacer />
-            </v-row>
+    <center-layout>
+        <div v-if="error">
+            <div id="error">
+                <v-alert type="error" v-text="error"></v-alert>
+            </div>
         </div>
-    </div>
+        <div v-else>
+            <h1>
+                Category:
+                {{ $options.categories[this.$route.params.category].name }}
+            </h1>
+            <h2
+                class="pb-7"
+                v-text="
+                    `${found_posts.length} Post${
+                        found_posts.length !== 1 ? 's' : ''
+                    }`
+                "
+            />
+            <feed-card
+                v-for="post_id in found_posts"
+                :key="post_id"
+                :id="post_id"
+                :featured-image-src="$options.posts[post_id].featured"
+                :title="$options.posts[post_id].title"
+                :publishDate="$options.posts[post_id].publish_date"
+                :updateDate="$options.posts[post_id].update_date"
+                :readingTime="$options.posts[post_id].reading_time"
+                :excerpt="$options.posts[post_id].excerpt"
+                :categories="$options.posts[post_id].categories"
+            />
+        </div>
+    </center-layout>
 </template>
 
 <script>
 import posts from "@/content/posts.json";
 import categories from "@/content/categories.json";
-import BlogCard from "../components/BlogCard.vue";
+
+import CenterLayout from "@/components/CenterLayout";
+import FeedCard from "../components/FeedCard.vue";
 
 export default {
     name: "BlogFeed",
     posts: posts,
     categories: categories,
-    components: { BlogCard },
+    components: { FeedCard, CenterLayout },
     data: function() {
         return {
             found_posts: null,
