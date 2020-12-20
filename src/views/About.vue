@@ -6,10 +6,10 @@
             </div>
         </header>
         <article>
-            <vue-markdown v-if="md != '' && !error" :source="md" />
+            <vue-markdown v-if="markdown != '' && !error" :source="markdown" />
 
             <v-progress-circular
-                v-if="md == '' && !error"
+                v-if="markdown == '' && !error"
                 indeterminate
                 color="primary"
             ></v-progress-circular>
@@ -32,14 +32,14 @@ export default {
     components: { CenterLayout, VueMarkdown },
     data: function() {
         return {
-            md: "",
+            markdown: "",
             error: false
         };
     },
     mounted() {
         import("raw-loader!@/content/about-the-author.md")
             .then(data => {
-                this.md = data.default;
+                this.markdown = data.default;
             })
             .catch(error => {
                 console.error(error);
