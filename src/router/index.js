@@ -20,7 +20,7 @@ const routes = [
         path: "/posts/:post",
         name: "Post",
         component: () =>
-            import(/* webpackChuckName: "post" */ "../views/PostView.vue")
+            import(/* webpackChuckName: "post" */ "../views/Post.vue")
     },
     {
         path: "/category/:category",

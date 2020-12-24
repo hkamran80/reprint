@@ -10,9 +10,20 @@
         <div id="content" v-else>
             <header class="pb-7">
                 <div id="metadata" class="pb-4">
-                    <span v-text="post.publish_date"></span>
-                    <h1 v-text="post.title" class="pb-1"></h1>
-                    <span v-text="post.excerpt" class="pb-2"></span>
+                    <v-row no-gutters>
+                        <v-col>
+                            <span v-text="post.publish_date" />
+                            <span
+                                v-text="` / ${post.update_date} (Updated)`"
+                                v-if="post.update_date !== ''"
+                            />
+                        </v-col>
+                        <v-col class="text-right" cols="1">
+                            <span v-text="post.reading_time" />
+                        </v-col>
+                    </v-row>
+                    <h1 v-text="post.title" class="pb-1" />
+                    <span v-text="post.excerpt" class="pb-2" />
                 </div>
                 <div class="categories pb-4">
                     <v-chip
@@ -63,6 +74,7 @@ export default {
     mounted() {
         if (posts[this.$route.params.post] !== undefined) {
             this.post = posts[this.$route.params.post];
+            document.title = `${this.post.title} - Reprint`;
             import(`raw-loader!@/content/files/${this.$route.params.post}.md`)
                 .then(data => {
                     this.markdown = data.default;

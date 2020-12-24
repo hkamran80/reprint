@@ -8,33 +8,23 @@
     },
     "vuejs": {
         "name": "Vue.js",
-        "posts": [
-            "using-local-storage-to-store-vuetifys-dark-theme-state"
-        ]
+        "posts": ["using-local-storage-to-store-vuetifys-dark-theme-state"]
     },
     "darkmode": {
         "name": "Dark Mode",
-        "posts": [
-            "using-local-storage-to-store-vuetifys-dark-theme-state"
-        ]
+        "posts": ["using-local-storage-to-store-vuetifys-dark-theme-state"]
     },
     "git": {
         "name": "Git",
-        "posts": [
-            "inaccurate-pushing-to-github-with-git"
-        ]
+        "posts": ["inaccurate-pushing-to-github-with-git"]
     },
     "github": {
         "name": "GitHub",
-        "posts": [
-            "inaccurate-pushing-to-github-with-git"
-        ]
+        "posts": ["inaccurate-pushing-to-github-with-git"]
     },
     "inaccurate": {
         "name": "Inaccurate",
-        "posts": [
-            "inaccurate-pushing-to-github-with-git"
-        ]
+        "posts": ["inaccurate-pushing-to-github-with-git"]
     },
     "development": {
         "name": "Development",
@@ -42,5 +32,9 @@
             "using-local-storage-to-store-vuetifys-dark-theme-state",
             "inaccurate-pushing-to-github-with-git"
         ]
+    },
+    "vuetify": {
+        "name": "Vuetify",
+        "posts": ["vuetify-dark-mode-toggle"]
     }
 }
