@@ -68,6 +68,13 @@ export default {
                 "dark_theme",
                 this.$vuetify.theme.dark.toString()
             );
+
+            this.$insights_app.track({
+                id: "toggle-dark-mode",
+                parameters: {
+                    darkMode: this.$vuetify.theme.dark
+                }
+            });
         }
     }
 };

@@ -59,6 +59,7 @@ import posts from "@/content/posts.json";
 import categories from "@/content/categories.json";
 import VueMarkdown from "vue-markdown";
 import CenterLayout from "../components/CenterLayout.vue";
+import { parameters } from "insights-js";
 
 export default {
     name: "PostView",
@@ -82,6 +83,16 @@ export default {
                 .catch(error => {
                     this.error = error;
                 });
+
+            this.$insights_app.track({
+                id: "read-post",
+                parameters: {
+                    postId: this.$route.params.post,
+                    locale: parameters.locale(),
+                    screenSize: parameters.screenType(),
+                    darkMode: this.$vuetify.theme.dark
+                }
+            });
         } else {
             this.error = `The post you are trying to access, ${this.$route.params.post}, does not exist.`;
             this.$router.push({

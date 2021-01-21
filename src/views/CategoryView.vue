@@ -37,9 +37,9 @@
 <script>
 import posts from "@/content/posts.json";
 import categories from "@/content/categories.json";
-
 import CenterLayout from "@/components/CenterLayout";
 import FeedCard from "../components/FeedCard.vue";
+import { parameters } from "insights-js";
 
 export default {
     name: "BlogFeed",
@@ -67,6 +67,16 @@ export default {
         this.found_posts = this.$options.categories[
             this.$route.params.category
         ].posts;
+
+
+        this.$insights_app.track({
+            id: "open-category",
+            parameters: {
+                locale: parameters.locale(),
+                screenSize: parameters.screenType(),
+                darkMode: this.$vuetify.theme.dark
+            }
+        });
     }
 };
 </script>

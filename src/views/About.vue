@@ -26,6 +26,7 @@
 <script>
 import CenterLayout from "@/components/CenterLayout";
 import VueMarkdown from "vue-markdown";
+import { parameters } from "insights-js";
 
 export default {
     name: "AboutTheAuthor",
@@ -37,6 +38,15 @@ export default {
         };
     },
     mounted() {
+        this.$insights_app.track({
+            id: "read-about",
+            parameters: {
+                locale: parameters.locale(),
+                screenSize: parameters.screenType(),
+                darkMode: this.$vuetify.theme.dark
+            }
+        });
+
         import("raw-loader!@/content/about-the-author.md")
             .then(data => {
                 this.markdown = data.default;

@@ -12,6 +12,16 @@
                     A mirror of these posts is available on
                     <a href="https://hkamran.medium.com" target="_blank"
                         >Medium</a
+                    >. All page views are anonymously logged using
+                    <a href="https://getinsights.io" target="_blank">Insights</a
+                    >. By using this site, you agree to the be tracked. Read
+                    Insights'
+                    <a href="https://getinsights.io/terms" target="_blank"
+                        >Terms and Conditions</a
+                    >
+                    and their
+                    <a href="https://getinsights.io/privacy" target="_blank"
+                        >Privacy Policy</a
                     >.
                 </v-card-text>
                 <v-divider></v-divider>
@@ -32,6 +42,9 @@ export default {
     name: "App",
     components: {
         NavigationBar
+    },
+    mounted() {
+        this.$insights_app.trackPages();
     }
 };
 </script>

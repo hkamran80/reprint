@@ -8,11 +8,11 @@
     },
     "vuejs": {
         "name": "Vue.js",
-        "posts": ["using-local-storage-to-store-vuetifys-dark-theme-state"]
+        "posts": ["vuetify-dark-mode-toggle"]
     },
     "darkmode": {
         "name": "Dark Mode",
-        "posts": ["using-local-storage-to-store-vuetifys-dark-theme-state"]
+        "posts": ["vuetify-dark-mode-toggle"]
     },
     "git": {
         "name": "Git",
@@ -29,7 +29,7 @@
     "development": {
         "name": "Development",
         "posts": [
-            "using-local-storage-to-store-vuetifys-dark-theme-state",
+            "vuetify-dark-mode-toggle",
             "inaccurate-pushing-to-github-with-git"
         ]
     },

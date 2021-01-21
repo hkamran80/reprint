@@ -5,8 +5,11 @@ import router from "./router";
 import vuetify from "./plugins/vuetify";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
+import { App as insightsApp } from "insights-js";
 
 Vue.config.productionTip = false;
+
+Vue.prototype.$insights_app = new insightsApp("upyGnbKFwNDWkbP3");
 
 new Vue({
     router,
